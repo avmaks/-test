@@ -1,0 +1,87 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #21153b, #07080f 48%);
+  color: #f5f3ff;
+}
+
+.app-root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.panel {
+  background: rgba(14, 18, 30, 0.82);
+  border: 1px solid rgba(137, 105, 255, 0.35);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 8px auto;
+  font-size: 42px;
+}
+
+.avatar-novice { background: linear-gradient(135deg, #adadb0, #52525b); }
+.avatar-warrior { background: linear-gradient(135deg, #dbeafe, #1d4ed8); }
+.avatar-legend { background: linear-gradient(135deg, #fde68a, #f59e0b); box-shadow: 0 0 20px rgba(245, 158, 11, 0.7); }
+
+.muted { color: #c4b5fd; }
+.lvl { font-weight: 700; font-size: 20px; text-align: center; margin: 6px 0; }
+
+.task-list { display: grid; gap: 10px; }
+.task-card { border: 1px solid rgba(100, 116, 139, .5); border-radius: 10px; padding: 10px; }
+.task-head, .task-actions { display: flex; justify-content: space-between; gap: 8px; align-items: center; flex-wrap: wrap; }
+
+input, textarea, select, button {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #4c1d95;
+  background: #0f172a;
+  color: #fff;
+  padding: 8px;
+  margin-top: 6px;
+}
+
+button { cursor: pointer; background: #6d28d9; font-weight: 600; }
+button:hover { background: #7c3aed; }
+
+.status-line { margin: 8px 2px 12px; color: #ddd6fe; }
+
+.focus-overlay {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 20;
+}
+
+.focus-overlay h1 { font-size: 72px; margin: 0; }
